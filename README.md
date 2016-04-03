@@ -1,4 +1,10 @@
-# Cat Clicker - Poncho Style
+# Cat Clicker - Two Cat Style
 
-A simple game in which you click the provided picture of a beautiful cat and
-watch as your score count soars!
+A simple game in which you click one of two provided pictures of beautiful cats
+and watch as your score count soars! Used as an exercise in changing a project's
+goal and implementation as times goes on.
+
+## Past versions
+
+1. Poncho style: only one cat to click
+   (commit: d714e3f63d170c7664df97ece012950eaf400971)
