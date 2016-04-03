@@ -31,3 +31,8 @@ header {
     position: absolute;
     right: 10%;
 }
+
+#the-ponch:hover {
+    cursor: hand;
+    cursor: pointer;
+}
