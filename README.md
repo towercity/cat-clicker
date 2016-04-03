@@ -1,8 +1,10 @@
 # Cat Clicker - List Style
 
-A simple game in which you click one of two provided pictures of beautiful cats
-and watch as your score counts soar! Used as an exercise in changing a project's
-goal and implementation as times goes on.
+A simple game in which you click one of five provided pictures of beautiful cats
+and watch as your score counts soar! Click the name of your favorite cat along
+the left of the screen and give it all the clicks your heart desires. Each cat's
+score is held separately. Used as an exercise in changing a project's goal and
+implementation as times goes on.
 
 ## Past versions
 
