@@ -2,7 +2,6 @@
 var $cat = $('.cat-pic'),
     $scoreElement = $('#score-count'),
     $catCaption = $('#cat-caption'),
-    $buttonsArray = [$('#cat-1'), $('#cat-2'), $('#cat-3'), $('#cat-4'), $('#cat-5')],
     $buttons = $('.cat-switch'),
 //Arrays
     catNames = ['Ponchatoula', 'Ellers', 'Thackery Binx', 'Garfield, the Patriot', 'Mr. Bigglesworth'],
