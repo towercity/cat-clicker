@@ -2,29 +2,32 @@
 
 <html>
 <head>
-    <title>Cat Clicker - Two Cat Style</title>
+    <title>Cat Clicker - Cat List Style</title>
 
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <header>
-        <h1 class = "left">Cat Clicker - Two Cat</h1>
+        <h1 class = "left">Cat Clicker - Cat List Style</h1>
     </header>
     <article>
-        <figure>
-            <img src="img/the-ponch-1500.jpg" id = "cat-1" alt = "The cat you should be clicking on, not hovering over">
-            <figcaption id = "cat-1-caption"> </figcaption>
-        </figure>
-        <figure>
-            <img src="img/ellers.jpg" id = "cat-2" alt = "The cat you should be clicking on, not hovering over">
-            <figcaption id = "cat-2-caption"> </figcaption>
-        </figure>
+        <div id = "cat-list">
+            <button id = "cat-1"> </button>
+            <button id = "cat-2"> </button>
+            <button id = "cat-3"> </button>
+            <button id = "cat-4"> </button>
+            <button id = "cat-5"> </button>
+        </div>
+
+        <div id = "cat-display">
+            <figure>
+                <img src="img/the-ponch-1500.jpg" class = "cat-pic" alt = "The cat you should be clicking on, not hovering over">
+                <figcaption id = "cat-caption"> </figcaption>
+            </figure>
+        </div>
     </article>
     <footer>
-        <h1 class= "left" id = "score-count-1">0</h1>
-        <h1 class= "left">clicks</h1>
-
-        <h1 class = "right" id = "score-count-2">0</h1>
+        <h1 class = "right" id = "score-count">0</h1>
         <h1 class = "right">clicks</h1>
     </footer>
 
