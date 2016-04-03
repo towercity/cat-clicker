@@ -27,17 +27,24 @@ article  {
     display: flex;
 }
 
+img:hover {
+    cursor: hand;
+    cursor: pointer;
+}
+
+.left,
+#score-count-1,
+.right,
+#score-count-2 {
+    display: inline;
+}
+
 .right {
     position: absolute;
     right: 10%;
 }
 
-#score-count{
+#score-count-2 {
     position: absolute;
     right: calc(10% + 81px);
-}
-
-.cat:hover {
-    cursor: hand;
-    cursor: pointer;
 }

@@ -1,7 +1,7 @@
 # Cat Clicker - Two Cat Style
 
 A simple game in which you click one of two provided pictures of beautiful cats
-and watch as your score count soars! Used as an exercise in changing a project's
+and watch as your score counts soar! Used as an exercise in changing a project's
 goal and implementation as times goes on.
 
 ## Past versions

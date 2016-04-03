@@ -1,10 +1,13 @@
-var $cat = $('.cat'),
-    $scoreElement = $('#score-count'),
+var $cat1 = $('#cat-1'),
+    $cat2 = $('#cat-2'),
+    $scoreElementOne = $('#score-count-1'),
+    $scoreElementTwo = $('#score-count-2'),
     catOneName = 'Ponchatoula',
     catTwoName = 'Ellers',
     $catOneCaption = $('#cat-1-caption'),
     $catTwoCaption = $('#cat-2-caption'),
-    score = 0;
+    scoreOne = 0,
+    scoreTwo = 0;
 
 //adds captions when the page has loaded
 $(document).ready(function() {
@@ -12,9 +15,15 @@ $(document).ready(function() {
     $catTwoCaption.text("The beautiful " + catTwoName + ", awaiting your click");
 });
 
-//increases score upon click and updates score DOM element
-$cat.click(function() {
-    score++;
+//increases scores upon click and updates score DOM element
+$cat1.click(function() {
+    scoreOne++;
 
-    $scoreElement.text(score);
+    $scoreElementOne.text(scoreOne);
+});
+
+$cat2.click(function() {
+    scoreTwo++;
+
+    $scoreElementTwo.text(scoreTwo);
 });
