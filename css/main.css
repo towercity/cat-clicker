@@ -24,12 +24,12 @@ header {
 
 .right {
     position: absolute;
-    right: calc(10% + 20px);
+    right: 10%;
 }
 
 #score-count{
     position: absolute;
-    right: 10%;
+    right: calc(10% + 81px);
 }
 
 #the-ponch:hover {
