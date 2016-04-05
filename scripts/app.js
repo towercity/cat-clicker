@@ -57,9 +57,10 @@ var octopus = {
 /* ======== Views ======== */
 
 var listDisplay = {
-    $buttons: $('.cat-switch'),
+    $catList: $('.cat-switch'),
+    $adminButton: $('#admin-button'),
     init: function() {
-        this.$buttons.click(function(e) {
+        this.$catList.click(function(e) {
             switch (e.target.id) {
                 case 'cat-0':
                     octopus.changeCat(0);
@@ -83,6 +84,10 @@ var listDisplay = {
             catDisplay.render();
         });
 
+        this.$adminButton.click(function() {
+            $('#admin-tools').toggle("fast");
+        });
+
         this.render();
     },
     render: function() {
@@ -90,6 +95,8 @@ var listDisplay = {
         for (var i = 0; i < catsArray.length; i++) {
             $('#cat-' + i).text(catsArray[i].name);
         }
+
+
     }
 }
 

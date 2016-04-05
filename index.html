@@ -14,11 +14,24 @@
     </header>
     <article>
         <div id = "cat-list">
-            <a href="#" class = "cat-switch" id = "cat-0"> </a>
-            <a href="#" class = "cat-switch" id = "cat-1"> </a>
-            <a href="#" class = "cat-switch" id = "cat-2"> </a>
-            <a href="#" class = "cat-switch" id = "cat-3"> </a>
-            <a href="#" class = "cat-switch" id = "cat-4"> </a>
+            <div id = "switch">
+                <a href="#" class = "cat-switch" id = "cat-0"> </a>
+                <a href="#" class = "cat-switch" id = "cat-1"> </a>
+                <a href="#" class = "cat-switch" id = "cat-2"> </a>
+                <a href="#" class = "cat-switch" id = "cat-3"> </a>
+                <a href="#" class = "cat-switch" id = "cat-4"> </a>
+            </div>
+
+            <div id = "admin">
+                <button id = "admin-button">Admin mode</button>
+                <form id = "admin-tools">
+                    Name: <input type="text" id="name"><br>
+                    Image URL: <input type="text" id="url"><br>
+                    Score: <input type="text" id="name"><br>
+                    <button id = "cancel">Cancel</button>
+                    <button id = "save">Save</button>
+                </form>
+            </div>
         </div>
 
         <div id = "cat-display">
