@@ -6,6 +6,9 @@ the left of the screen and give it all the clicks your heart desires. Each cat's
 score is held separately. Used as an exercise in changing a project's goal and
 implementation as times goes on.
 
+Also included is an admin function, which allows you to view and edit the data
+for each cat from the browser window.
+
 ## Past versions
 
 1. Poncho style: only one cat to click
