@@ -1,3 +1,6 @@
+
+/* ======== Model ======== */
+
 var model = {
     currentCat: 0,
     cats: [
@@ -29,6 +32,8 @@ var model = {
     ]
 };
 
+/* ======== octopus ======== */
+
 var octopus = {
     init: function() {
         listDisplay.init();
@@ -48,6 +53,8 @@ var octopus = {
         catDisplay.render();
     }
 };
+
+/* ======== Views ======== */
 
 var listDisplay = {
     $buttons: $('.cat-switch'),
