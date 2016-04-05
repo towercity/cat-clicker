@@ -40,6 +40,9 @@ var octopus = {
     getCatsArray: function() {
         return model.cats;
     },
+    changeCat: function(catNo) {
+        model.currentCat = catNo;
+    },
     increaseScore: function() {
         model.cats[model.currentCat].score++;
         catDisplay.render();
@@ -49,6 +52,29 @@ var octopus = {
 var listDisplay = {
     $buttons: $('.cat-switch'),
     init: function() {
+        this.$buttons.click(function(e) {
+            switch (e.target.id) {
+                case 'cat-0':
+                    octopus.changeCat(0);
+                    break;
+                case 'cat-1':
+                    octopus.changeCat(1);
+                    break;
+                case 'cat-2':
+                    octopus.changeCat(2);
+                    break;
+                case 'cat-3':
+                    octopus.changeCat(3);
+                    break;
+                case 'cat-4':
+                    octopus.changeCat(4);
+                    break;
+                default:
+                    console.log("Error with cat switcher");
+                    break;
+            }
+            catDisplay.render();
+        });
 
         this.render();
     },
