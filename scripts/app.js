@@ -59,11 +59,11 @@ var octopus = {
 var listDisplay = {
     $catList: $('.cat-switch'),
     $adminButton: $('#admin-button'),
+    $adminCancel: $('#admin-cancel'),
+    $adminSave: $('#admin-save'),
     $adminName: $('#admin-name'),
     $adminURL: $('#admin-url'),
     $adminScore: $('#admin-score'),
-    $adminCancel: $('#admin-cancel'),
-    $adminSave: $('#admin-save'),
     init: function() {
         //switches displayed cat based on click
         this.$catList.click(function(e) {
@@ -94,25 +94,33 @@ var listDisplay = {
         //admin button
         this.$adminButton.click(function() {
             $('#admin-tools').toggle("fast");
+            $('#admin-button').toggle();
+            listDisplay.render();
         });
 
-        //cancel button, whic also resets form
+        //cancel button, which also resets form
         this.$adminCancel.click(function() {
             $('#admin-tools').toggle("fast");
-            $('#admin-name').val("name");
-            $('#admin-url').val("url");
-            $('#admin-score').val("score");
+            $('#admin-button').toggle("fast");
+            listDisplay.render();
         });
+
+        //listens for save button, changes cats info
 
         this.render();
     },
     render: function() {
+        //render cat list
         var catsArray = octopus.getCatsArray();
         for (var i = 0; i < catsArray.length; i++) {
             $('#cat-' + i).text(catsArray[i].name);
         }
 
-
+        //render info into cat fields
+        var currentCat = octopus.getCurrentCat();
+        this.$adminName.val(currentCat.name);
+        this.$adminURL.val(currentCat.img);
+        this.$adminScore.val(currentCat.score);
     }
 }
 
