@@ -45,6 +45,12 @@ var octopus = {
     getCatsArray: function() {
         return model.cats;
     },
+    pushCat: function(obj) {
+        model.cats[model.currentCat].name = obj.name;
+        model.cats[model.currentCat].img = obj.img;
+        model.cats[model.currentCat].score = obj.score;
+        catDisplay.render();
+    },
     changeCat: function(catNo) {
         model.currentCat = catNo;
     },
@@ -88,6 +94,7 @@ var listDisplay = {
                     break;
             }
             catDisplay.render();
+            listDisplay.render();
         });
 
         //toggles admin tools with.....
@@ -98,7 +105,7 @@ var listDisplay = {
             listDisplay.render();
         });
 
-        //cancel button, which also resets form
+        //cancel button
         this.$adminCancel.click(function() {
             $('#admin-tools').toggle("fast");
             $('#admin-button').toggle("fast");
@@ -106,6 +113,18 @@ var listDisplay = {
         });
 
         //listens for save button, changes cats info
+        this.$adminSave.click(function() {
+            var catToPush = {
+                name: $('#admin-name').val(),
+                img: $('#admin-url').val(),
+                score: $('#admin-score').val()
+            }
+            octopus.pushCat(catToPush);
+
+            $('#admin-tools').toggle("fast");
+            $('#admin-button').toggle("fast");
+            listDisplay.render();
+        });
 
         this.render();
     },
