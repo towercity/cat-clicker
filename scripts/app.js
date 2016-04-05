@@ -59,7 +59,13 @@ var octopus = {
 var listDisplay = {
     $catList: $('.cat-switch'),
     $adminButton: $('#admin-button'),
+    $adminName: $('#admin-name'),
+    $adminURL: $('#admin-url'),
+    $adminScore: $('#admin-score'),
+    $adminCancel: $('#admin-cancel'),
+    $adminSave: $('#admin-save'),
     init: function() {
+        //switches displayed cat based on click
         this.$catList.click(function(e) {
             switch (e.target.id) {
                 case 'cat-0':
@@ -84,8 +90,18 @@ var listDisplay = {
             catDisplay.render();
         });
 
+        //toggles admin tools with.....
+        //admin button
         this.$adminButton.click(function() {
             $('#admin-tools').toggle("fast");
+        });
+
+        //cancel button, whic also resets form
+        this.$adminCancel.click(function() {
+            $('#admin-tools').toggle("fast");
+            $('#admin-name').val("name");
+            $('#admin-url').val("url");
+            $('#admin-score').val("score");
         });
 
         this.render();
