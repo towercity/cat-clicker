@@ -8,9 +8,8 @@
 </head>
 <body>
     <header>
-        <h1 class = "left">Cat Clicker - <span id= "cat-name"></span></h1>
-        <h1 class = "right" id = "score-count">0</h1>
-        <h1 class = "right">clicks</h1>
+        <h1 class = "left">Cat Clicker - <span data-bind = "text: name"></span></h1>
+        <h1 class = "right"><span data-bind = "text: score"></span> clicks</h1>
     </header>
     <article>
         <div id = "cat-list">
@@ -36,8 +35,8 @@
 
         <div id = "cat-display">
             <figure>
-                <img class = "cat-pic" alt = "The cat you should be clicking on, not hovering over">
-                <figcaption id = "cat-caption">null</figcaption>
+                <img data-bind = "click: incrementCounter, attr: {src: img}" alt = "The cat you should be clicking on, not hovering over">
+                <figcaption>The beautiful <span data-bind = "text: name"></span>, awaiting your click. It's just like petting <span data-bind = "text: pronoun"></span>.</figcaption>
             </figure>
         </div>
     </article>
@@ -45,6 +44,6 @@
     <!-- scripts to run app-->
     <script src="scripts/lib/knockout-3.4.0.js"></script>
     <script src="scripts/lib/jquery-2.2.2.min.js"></script>
-    <script src="scripts/app.js"></script>
+    <script src="scripts/NEWapp.js"></script>
 </body>
 </html>
