@@ -13,12 +13,8 @@
     </header>
     <article>
         <div id = "cat-list">
-            <div id = "switch">
-                <a href="#" class = "cat-switch" id = "cat-0"> </a>
-                <a href="#" class = "cat-switch" id = "cat-1"> </a>
-                <a href="#" class = "cat-switch" id = "cat-2"> </a>
-                <a href="#" class = "cat-switch" id = "cat-3"> </a>
-                <a href="#" class = "cat-switch" id = "cat-4"> </a>
+            <div data-bind = "foreach: cats">
+                <a href="#" data-bind = "text: name"></a>
             </div>
 
             <div id = "admin">

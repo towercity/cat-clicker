@@ -1,4 +1,12 @@
 var ViewModel = function() {
+    this.cats = ko.observableArray([
+        { name: "Ponchatoula" },
+        { name: "Ellers" },
+        { name: "Thackery Binx" },
+        { name: "Garfield the Patriot" },
+        { name: "Mr. Bigglesworth" }
+    ]);
+
     this.name = ko.observable('Ponchatoula');
     this.score = ko.observable(0);
     this.pronoun = ko.observable('him');
