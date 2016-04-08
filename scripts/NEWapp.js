@@ -1,12 +1,12 @@
 var ViewModel = function() {
-    this.cats = ko.observableArray([
-        { name: "Ponchatoula" },
-        { name: "Ellers" },
-        { name: "Thackery Binx" },
-        { name: "Garfield the Patriot" },
-        { name: "Mr. Bigglesworth" }
-    ]);
+    this.currentCat = ko.observable(new Cat());
 
+    this.incrementCounter = function() {
+        this.currentCat().score(this.currentCat().score() + 1);
+    }
+};
+
+var Cat = function() {
     this.name = ko.observable('Ponchatoula');
     this.score = ko.observable(0);
     this.pronoun = ko.observable('him');
@@ -28,10 +28,6 @@ var ViewModel = function() {
             return "Elder Sage";
         }
     }, this);
-
-    this.incrementCounter = function() {
-        this.score(this.score() + 1);
-    }
-};
+}
 
 ko.applyBindings(new ViewModel());
