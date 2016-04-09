@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <header>
-        <h1 class = "left">Cat Clicker - <span data-bind = "text: currentCat().name"></span></h1>
-        <h1 class = "right"><span data-bind = "text: currentCat().score"></span> clicks</h1>
+    <header data-bind = "with: currentCat">
+        <h1 class = "left">Cat Clicker - <span data-bind = "text: name"></span></h1>
+        <h1 class = "right"><span data-bind = "text: score"></span> clicks</h1>
     </header>
     <article>
         <div id = "cat-list">
@@ -26,11 +26,11 @@
             </div>
         </div>
 
-        <div id = "cat-display">
-            <h2 id = "cat-name">Level: <span data-bind = "text: currentCat().level"></span></h2>
+        <div id = "cat-display" data-bind = "with: currentCat">
+            <h2 id = "cat-name">Level: <span data-bind = "text: level"></span></h2>
             <figure>
-                <img data-bind = "click: incrementCounter, attr: {src: currentCat().img}" alt = "The cat you should be clicking on, not hovering over">
-                <figcaption>The beautiful <span data-bind = "text: currentCat().name"></span>, awaiting your click. It's just like petting <span data-bind = "text: currentCat().pronoun"></span>.</figcaption>
+                <img data-bind = "click: $parent.incrementCounter, attr: {src: img}" alt = "The cat you should be clicking on, not hovering over">
+                <figcaption>The beautiful <span data-bind = "text: name"></span>, awaiting your click. It's just like petting <span data-bind = "text: pronoun"></span>.</figcaption>
             </figure>
         </div>
     </article>

@@ -1,8 +1,9 @@
 var ViewModel = function() {
+    var self = this;
     this.currentCat = ko.observable(new Cat());
 
     this.incrementCounter = function() {
-        this.currentCat().score(this.currentCat().score() + 1);
+        self.currentCat().score(self.currentCat().score() + 1);
     }
 };
 
