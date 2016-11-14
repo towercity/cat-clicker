@@ -29,9 +29,13 @@ header {
 }
 #cat-list {
 	position: fixed;
-	top: 75px;
+	top: 55px;
 	width: 20%;
 	display: none;
+	white-space: nowrap;
+	z-index: 2;
+	background-color: white;
+	height: calc(100vh - 55px);
 }
 a {
 	display: block;
