@@ -23,10 +23,15 @@ header {
 	padding: 10px;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
+.fa-bars {
+	margin: 3px 15px 0 0;
+	cursor: pointer;
+}
 #cat-list {
 	position: fixed;
 	top: 75px;
 	width: 20%;
+	display: none;
 }
 a {
 	display: block;
