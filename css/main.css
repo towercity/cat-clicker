@@ -25,7 +25,7 @@ header {
 }
 #cat-list {
 	position: fixed;
-	top: 65px;
+	top: 75px;
 	width: 20%;
 }
 a {
@@ -33,9 +33,10 @@ a {
 }
 #cat-display {
 	position: absolute;
-	top: 65px;
+	top: 75px;
 	left: 20%;
 	width: 80%;
+	margin-bottom: 25px;
 }
 .cat-wrap {
 	width: 700px;
