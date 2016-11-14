@@ -31,6 +31,9 @@ header {
 a {
 	display: block;
 }
+h2 {
+	padding-bottom: 15px;
+}
 #cat-display {
 	margin: 75px auto 25px auto;
 }
@@ -73,13 +76,14 @@ img:hover {
 	cursor: hand;
 	cursor: pointer;
 }
-.right,
-#score-count {
-	display: inline;
+.left {
+	float: left;
 }
 .right {
-	position: absolute;
-	right: 4px;
+	float: right;
+}
+.clear {
+	clear: both;
 }
 #score-count {
 	position: absolute;

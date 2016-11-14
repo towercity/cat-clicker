@@ -9,9 +9,8 @@
 </head>
 
 <body>
-	<header data-bind="with: currentCat">
-		<h1 class="left">Cat Clicker - <span data-bind = "text: name"></span></h1>
-		<h1 class="right"><span data-bind = "text: score"></span> clicks</h1>
+	<header>
+		<h1>Cat Clicker</h1>
 	</header>
 	<article>
 		<div id="cat-list">
@@ -22,7 +21,13 @@
 
 		<div id="cat-display" data-bind="with: currentCat">
 			<div class="cat-wrap">
-				<h2 id="cat-name">Level: <span data-bind = "text: level"></span></h2>
+				<div>
+					<h2 class="left">Cat Clicker - <span data-bind = "text: name"></span></h2>
+					<h2 class="right"><span data-bind = "text: score"></span> clicks</h2>
+					<div class="clear"></div>
+				</div>
+
+				<h3 id="cat-name">Level: <span data-bind = "text: level"></span></h3>
 				<figure class="cat">
 					<img data-bind="click: $parent.incrementCounter, attr: {src: img}" alt="The cat you should be clicking on, not hovering over">
 					<figcaption>The beautiful <span data-bind="text: name"></span>, awaiting your click. It's just like petting <span data-bind="text: pronoun"></span>.</figcaption>
