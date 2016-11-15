@@ -52,13 +52,16 @@ var ViewModel = function () {
 
 	this.switchCat = function (data) {
 		self.currentCat(data);
+		self.toggleMenu();
 	}
 
-	this.toggleMenu = function (data) {
+	this.toggleMenu = function () {
 		$('#cat-list').animate({
 			duration: 200,
 			width: 'toggle'
 		});
+
+		$('#grey-box').toggle();
 	}
 };
 
