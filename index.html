@@ -16,9 +16,6 @@
 	</header>
 	<article>
 		<div id="cat-list">
-			<div class="menu-header">
-				<i class="fa fa-bars fa-2x" aria-hidden="true" data-bind="click: toggleMenu"></i>
-			</div>
 			<div data-bind="foreach: catList">
 				<a href="#" data-bind="text: name, click: $parent.switchCat"></a>
 			</div>

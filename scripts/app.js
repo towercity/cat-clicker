@@ -39,6 +39,8 @@ var initialCats = [
 var ViewModel = function () {
 	var self = this;
 
+	this.menuOpen = false;
+
 	this.catList = ko.observableArray([]);
 	initialCats.forEach(function (cat) {
 		self.catList.push(new Cat(cat));
@@ -56,9 +58,19 @@ var ViewModel = function () {
 	}
 
 	this.toggleMenu = function () {
+		var leftPx = 0;
+
+		if (self.menuOpen) {
+			leftPx = -360;
+			self.menuOpen = false;
+		} else {
+			leftPx = 0;
+			self.menuOpen = true;
+		}
+
 		$('#cat-list').animate({
 			duration: 200,
-			width: 'toggle'
+			left: leftPx
 		});
 
 		$('#grey-box').toggle();
