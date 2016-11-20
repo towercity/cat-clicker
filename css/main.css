@@ -44,18 +44,30 @@ header {
 	left: -360px;
 	white-space: nowrap;
 	z-index: 3;
-	background-color: white;
+	background-color: #fafafa;
 	height: 100vh;
 	box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.26);
 }
-.menu-header {
-	height: 55px;
-	color: white;
-	background-color: #000;
-	padding: 10px;
-	font-size 15px;
+#list-head {
+	height: 150px;
+	background-color: #e3ecf5;
+	border-bottom: 1px solid #ced6df;
+	color: #757575;
+	margin-bottom: 8px;
 }
-a {
+#list-head h1 {
+	padding: 16px;
+}
+.menu-item {
+	padding: 8px 0;
+	height: 48px;
+	font-size 25px;
+}
+.menu-item a {
+	color: black;
+	text-decoration: none;
+}
+.menu-link {
 	display: block;
 }
 h2 {

@@ -6,7 +6,7 @@
 	<title>Cat Clicker - Cat List Style</title>
 
 	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="lib/font-awesome-4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -16,9 +16,19 @@
 	</header>
 	<article>
 		<div id="cat-list">
-			<div data-bind="foreach: catList">
-				<a href="#" data-bind="text: name, click: $parent.switchCat"></a>
+			<div id="list-head">
+				<h1>Cat Clicker</h1>
 			</div>
+			<ul data-bind="foreach: catList" id="list-menu">
+				<li class="menu-item">
+					<i class="fa fa-id-card" aria-hidden="true"></i>
+					<a class="menu-link" href="#" data-bind="text: name, click: $parent.switchCat"></a>
+				</li>
+			</ul>
+			<ul>
+
+				<li class="menu-item">Cat icons by <a href="http://www.flaticon.com/authors/freepik">freepik</a> on <a href="http://flaticon.com">Flaticon</a></li>
+			</ul>
 		</div>
 
 		<div id="cat-display" data-bind="with: currentCat">
